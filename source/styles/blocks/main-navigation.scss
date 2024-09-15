@@ -1,0 +1,42 @@
+.main-navigation {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.main-navigation.no-js {
+  width: 100vw;
+  margin-left: -20px;
+}
+
+.main-navigation.show {
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.main-navigation__list.close {
+  display: none;
+}
+
+.main-navigation__list {
+  position: relative;
+  width: 100%;
+  z-index: 4;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    position: static;
+    max-width: 445px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 24px;
+    max-width: 485px;
+  }
+}

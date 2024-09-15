@@ -1,0 +1,136 @@
+.hero {
+  background-image: linear-gradient($secondary-gradient, $secondary-gradient), url("/images/main/hero-background-mobile@1x.jpg"), linear-gradient(90deg, $primary-gradient, $additional-gradient);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 320px 302px, 320px 302px, 100vw 302px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient($secondary-gradient, $secondary-gradient), url("/images/main/hero-background-mobile@2x.jpg"), linear-gradient(90deg, $primary-gradient, $additional-gradient);
+  }
+
+  @media (min-width: $tablet) {
+    min-height: 875px;
+    background-color: $basic-page;
+    background-image: none;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: transparent;
+    min-height: 663px;
+  }
+}
+
+.hero > .container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 27px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    display: block;
+    position: relative;
+    min-height: 870px;
+    padding-top: 65px;
+    padding-left: 120px;
+  }
+
+  @media (min-width: $desktop) {
+    position: relative;
+    min-height: 656px;
+    padding-left: 79px;
+    padding-top: 110px;
+  }
+}
+
+
+.hero__title {
+  @include text-style($secondary-font, 36px, 36px, $basic-page);
+  text-align: center;
+  margin: 0;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet) {
+    position: relative;
+    max-width: 450px;
+    margin-bottom: 40px;
+    z-index: 2;
+
+    @include text-style($secondary-font, 60px, 60px, $additional-color-text);
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 555px;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+}
+
+.hero__description {
+  @include text-style($secondary-font, 14px, 14px, $basic-page);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 29px;
+
+  @media (min-width: $tablet) {
+    position: relative;
+    max-width: 450px;
+    margin-bottom: 50px;
+    z-index: 2;
+
+    @include text-style($secondary-font, 20px, 20px, $additional-color-text);
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 555px;
+    text-align: left;
+    margin-bottom: 52px;
+  }
+}
+
+.hero__link {
+  order: 4;
+  padding: 10px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    position: relative;
+    max-width: 244px;
+    padding: 14px 24px;
+    order: 0;
+    z-index: 1;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 14px 24px;
+  }
+}
+
+.hero__link.link-button {
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+
+.hero__image {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 3px;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    top: 266px;
+    left: calc(50% - 354px);
+    margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: 31px;
+    left: calc(50% - 162px);
+    margin: 0;
+  }
+}
