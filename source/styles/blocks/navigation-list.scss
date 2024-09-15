@@ -1,6 +1,7 @@
 .navigation-list__item {
   width: 100%;
   border-top: 1px solid $border-color;
+  position: relative;
 
   @media (min-width: $tablet) {
     width: auto;
@@ -11,11 +12,96 @@
 .navigation-list__link {
   display: block;
   width: 100%;
-  padding: 22px 0 24px;
+  padding: 22px 20px 23px;
+  background-color: $basic-page;
 
   @include text-style($secondary-font, 20px, 20px, $additional-color-text);
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  background-color: #ffffff;
+
+  @media (min-width: $tablet) {
+    padding: 13px 4px 12px;
+    background-color: transparent;
+
+    @include text-style($secondary-font, 18px, 24px, $additional-color-text);
+  }
+
+  @media (min-width: $desktop) {
+    padding: 16px 4px 12px;
+    background-color: transparent;
+
+    @include text-style($secondary-font, 20px, 29.64px, $basic-page);
+  }
+
+  @media (min-width: $tablet) {
+    &:not(.navigation-list__link--current):is(:hover, :focus-visible) {
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    &:not(.navigation-list__link--current):active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &:not(.navigation-list__link--current):is(:hover, :focus-visible) {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:not(.navigation-list__link--current):active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+.navigation-list__link--current {
+  position: relative;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    right: 4px;
+    left: 4px;
+    bottom: 2px;
+    height: 2px;
+    background-color: $additional-page;
+
+    @media (max-width: 767px) {
+      height: 0;
+    }
+
+    @media (min-width: $tablet) {
+      bottom: 1px;
+    }
+
+    @media (min-width: $desktop) {
+      bottom: 3px;
+      background-color: $basic-page;
+    }
+  }
+}
+
+.navigation-list__link--catalog {
+  color: $additional-color-text-light;
+
+  @media (min-width: $desktop) {
+    &:not(.navigation-list__link--current):is(:hover, :focus-visible) {
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    &:not(.navigation-list__link--current):active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.navigation-list__link--catalog.navigation-list__link--current::after {
+  @media (min-width: $tablet) {
+    bottom: 3px;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: $additional-page;
+  }
 }
