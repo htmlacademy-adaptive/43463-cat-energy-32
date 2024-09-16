@@ -56,7 +56,7 @@
     }
   }
 
-  &:hover > .slider__line-button {
+  &:hover .slider__line-button {
     border-color: $additional-page;
   }
 
@@ -73,7 +73,7 @@
     }
   }
 
-  &:active > .slider__line-button {
+  &:active .slider__line-button {
     border-color: $line-secondary-color;
   }
 
