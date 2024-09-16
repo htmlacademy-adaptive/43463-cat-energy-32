@@ -1,4 +1,8 @@
-.contacts .container {
+.contacts--catalog {
+  background-color: $additional-bg;
+}
+
+.contacts__wrapper {
   padding-top: 26px;
   padding-bottom: 26px;
 
@@ -35,10 +39,6 @@
   }
 }
 
-.contacts--catalog {
-  background-color: $additional-bg;
-}
-
 .contacts__box-description {
   margin: 0;
   overflow: hidden;
@@ -71,6 +71,7 @@
   }
 
   @media (min-width: $desktop) {
+    align-self: start;
     max-width: 157px;
     text-align: left;
   }
@@ -80,7 +81,7 @@
   margin: 0;
 
   @media (min-width: $tablet) {
-    margin-top: 20px;
+    margin-top: 17px;
   }
 }
 

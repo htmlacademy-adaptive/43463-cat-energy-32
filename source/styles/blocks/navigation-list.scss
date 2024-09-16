@@ -28,7 +28,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 16px 4px 12px;
+    padding: 18px 4px 12px;
     background-color: transparent;
 
     @include text-style($secondary-font, 20px, 29.64px, $basic-page);
@@ -76,7 +76,7 @@
     }
 
     @media (min-width: $desktop) {
-      bottom: 3px;
+      bottom: 5px;
       background-color: $basic-page;
     }
   }
@@ -102,6 +102,7 @@
   }
 
   @media (min-width: $desktop) {
+    bottom: 5px;
     background-color: $additional-page;
   }
 }
