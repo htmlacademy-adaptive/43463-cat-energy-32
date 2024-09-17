@@ -68,7 +68,7 @@
     }
 
     @media (min-width: $desktop) {
-      margin-bottom: 25px;
+      margin-bottom: 24px;
     }
   }
 }
@@ -124,5 +124,7 @@
   width: 100%;
   padding: 10px;
   margin: 0 auto;
+
+  @include text-style($secondary-font, 16px, 20px, $basic-page);
   text-align: center;
 }

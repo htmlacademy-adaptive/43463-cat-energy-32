@@ -93,11 +93,15 @@
   padding: 10px;
   text-align: center;
 
+  @include text-style($secondary-font, 16px, 20px, $basic-page);
+
   @media (min-width: $tablet) {
     position: relative;
     max-width: 244px;
     padding: 14px 24px;
     order: 0;
+    font-size: 20px;
+    line-height: 26px;
     z-index: 1;
   }
 
@@ -105,14 +109,6 @@
     padding: 14px 24px;
   }
 }
-
-.hero__link.link-button {
-  @media (min-width: $tablet) {
-    font-size: 20px;
-    line-height: 26px;
-  }
-}
-
 
 .hero__image {
   display: block;

@@ -40,7 +40,6 @@
 .additional__name {
   margin: 0;
   margin-bottom: 11px;
-  font-weight: 400;
 
   @include text-style($secondary-font, 16px, 16px, $product-name-color);
   text-transform: uppercase;
@@ -91,6 +90,7 @@
 }
 
 .additional__button {
+  @include text-style($secondary-font, 16px, 20px, $basic-page);
   text-align: center;
   padding: 10px;
 

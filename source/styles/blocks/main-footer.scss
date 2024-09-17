@@ -4,6 +4,10 @@
 }
 
 .main-footer__logo {
+  @media (max-width: $tablet) {
+    align-self: center;
+  }
+
   @media (min-width: $tablet) {
     margin-right: 32px;
   }
@@ -31,18 +35,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 55px;
+    padding-top: 59px;
     padding-bottom: 55px;
   }
 
   @media (min-width: $desktop) {
-    padding-top: 66px;
+    padding-top: 67px;
     padding-bottom: 66px;
   }
-}
-
-.main-footer__logo .logo__image {
-  margin: 0 auto;
 }
 
 .main-footer__copyright-link {

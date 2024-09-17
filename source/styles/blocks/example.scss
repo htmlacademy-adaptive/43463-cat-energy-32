@@ -2,12 +2,12 @@
   background-color: $example-bg;
 
   @media (min-width: $tablet) {
-    background-image: linear-gradient($basic-page 57.3%, $example-bg 57.3%);
+    background-image: linear-gradient(360deg, $additional-bg 462px, $basic-page 462px);
   }
 
   @media (min-width: $desktop) {
     min-height: 598px;
-    background-image: linear-gradient($basic-page 25.7%, $additional-bg 25.7%);
+    background-image: linear-gradient($basic-page 158px, $additional-bg 158px);
   }
 }
 

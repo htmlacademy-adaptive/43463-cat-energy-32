@@ -115,10 +115,10 @@
 
 .promotion__button {
   padding: 15px;
-  font-size: 20px;
-  line-height: 26px;
   border: none;
   cursor: pointer;
+
+  @include text-style($secondary-font, 20px, 26px, $basic-page);
 
   @media (min-width: $tablet) {
     width: 256px;

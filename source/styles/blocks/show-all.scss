@@ -88,5 +88,7 @@
 .show-all__button {
   width: 100%;
   padding: 10px;
+
+  @include text-style($secondary-font, 16px, 20px, $main-color-text);
   text-align: center;
 }
